@@ -22,6 +22,12 @@ npm install
 npm i -g @vue/cli
 ```
 
+### Install Bootstrap para VueJS
+```
+yarn add bootstrap bootstrap-vue
+```
+
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
