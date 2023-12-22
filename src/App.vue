@@ -1,19 +1,21 @@
 <template>
   <div id="app">
     <NavBar :navbarData="navbarDataInfo"/>
-    <!-- aqui la barra de busqueda-->
+    <SearchNav :searchData="searchDataInfo"/>
     <!-- aqui la lista de empleos-->
   </div>
 </template>
 
 <script>
 import NavBar from './components/navbar.vue'
+import SearchNav from './components/search.vue';
 
 export default {
   name: 'App',
   components: {
-    NavBar
-  },
+    NavBar,
+    SearchNav
+},
   data(){
     return{
       navbarDataInfo: {
@@ -38,6 +40,20 @@ export default {
         loginLabel: 'Ingresa',
         registerLabel: 'Regístrate',
       },
+      searchDataInfo:{
+        optionsArea:[
+          {label:'Comercio'},
+          {label:'Contabilidad y finanzas'},
+          {label:'Diseño'},
+          {label:'Logística y Transporte'},
+          {label:'Marketing'},
+          {label:'Otro'},
+          {label:'Reclutamiento'},
+          {label:'Servicio al cliente'},
+          {label:'Tecnología'},
+          {label:'Ventas'},
+        ]
+      }
     }
   }
 }

@@ -14,15 +14,17 @@
         <li v-for="(option, index) in navbarData.options" :key="index" class="nav-item">
           <a class="nav-link" :href="option.url">{{ option.label }}</a>
         </li>
-        <li class="nav-item">
-          <select class="form-control">
+        <li class="nav-item d-flex" >
+          <select class="form-control btn">
             <option v-for="(profOption, index) in navbarData.professionalOptions" :key="index" :value="profOption.value">{{ profOption.label }}</option>
           </select>
+          <i class="fa-solid fa-angle-down d-flex align-items-center" ></i>
         </li>
-        <li class="nav-item">
-          <select class="form-control">
+        <li class="nav-item d-flex">
+          <select class="form-control btn p-0 m-0">
             <option v-for="(compOption, index) in navbarData.companyOptions" :key="index" :value="compOption.value">{{ compOption.label }}</option>
           </select>
+          <i class="fa-solid fa-angle-down d-flex align-items-center" ></i>
         </li>
         <li class="nav-item">
           <button class="btn btn-outline-primary">
