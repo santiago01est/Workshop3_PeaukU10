@@ -3,18 +3,21 @@
     <NavBar :navbarData="navbarDataInfo"/>
     <SearchNav :searchData="searchDataInfo"/>
     <!-- aqui la lista de empleos-->
+    <ContainerListJob :jobs="jobs"/>
   </div>
 </template>
 
 <script>
 import NavBar from './components/navbar.vue'
 import SearchNav from './components/search.vue';
+import ContainerListJob from './components/containerListJob.vue';
 
 export default {
   name: 'App',
   components: {
     NavBar,
-    SearchNav
+    SearchNav,
+    ContainerListJob
 },
   data(){
     return{
@@ -53,7 +56,31 @@ export default {
           {label:'Tecnología'},
           {label:'Ventas'},
         ]
-      }
+      },
+      jobs: [
+        {
+          id: 1,
+          image: require('@/assets/empresa01.jpg'),
+          title: 'Frontend Developer',
+          tags: ['JavaScript', 'Vue', 'CSS'],
+          company: 'TechCorp',
+          location: 'Remote',
+          salary: '$70k - $90k',
+          status: 'Actively Hiring'
+        },
+        {
+          id: 2,
+          image: require('@/assets/empresa01.jpg'),
+          title: 'Frontend Developer',
+          tags: ['JavaScript', 'Vue', 'CSS'],
+          company: 'TechCorp',
+          location: 'Remote',
+          salary: '$70k - $90k',
+          status: 'Actively Hiring'
+        },
+        // ... más trabajos
+      ]
+
     }
   }
 }
