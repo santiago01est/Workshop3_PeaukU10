@@ -66,16 +66,57 @@ export default {
           company: 'TechCorp',
           location: 'Remote',
           salary: '$70k - $90k',
+          numVacancies: 2,
+          date: "2 days ago",
+          //Aqui irá el grupo de emojis de ventajas de trabajar con ellos [quitar status por lo mencionado]
           status: 'Actively Hiring'
         },
         {
           id: 2,
-          image: require('@/assets/empresa01.jpg'),
+          image: require('@/assets/empresa02.jpg'),
           title: 'Frontend Developer',
           tags: ['JavaScript', 'Vue', 'CSS'],
           company: 'TechCorp',
           location: 'Remote',
           salary: '$70k - $90k',
+          numVacancies: 2,
+          date: "2 days ago",
+          status: 'Actively Hiring'
+        },
+        {
+          id: 3,
+          image: require('@/assets/empresa03.png'),
+          title: 'Frontend Developer',
+          tags: ['JavaScript', 'Vue', 'CSS'],
+          company: 'TechCorp',
+          location: 'Remote',
+          salary: '$70k - $90k',
+          numVacancies: 2,
+          date: "2 days ago",
+          status: 'Actively Hiring'
+        },
+        {
+          id: 4,
+          image: require('@/assets/empresa04.png'),
+          title: 'Frontend Developer',
+          tags: ['JavaScript', 'Vue', 'CSS'],
+          company: 'TechCorp',
+          location: 'Remote',
+          salary: '$70k - $90k',
+          numVacancies: 2,
+          date: "2 days ago",
+          status: 'Actively Hiring'
+        },
+        {
+          id: 5,
+          image: require('@/assets/empresa02.jpg'),
+          title: 'Frontend Developer',
+          tags: ['JavaScript', 'Vue', 'CSS'],
+          company: 'TechCorp',
+          location: 'Remote',
+          salary: '$70k - $90k',
+          numVacancies: 2,
+          date: "2 days ago",
           status: 'Actively Hiring'
         },
         // ... más trabajos
