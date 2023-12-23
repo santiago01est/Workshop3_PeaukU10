@@ -1,5 +1,5 @@
 <template>
-  <div class="job-item mb-3">
+  <div class="job-item mb-3 rounded">
 
     <b-row>
         <div class="col-auto ms-2">
@@ -10,10 +10,10 @@
         <div class="col ms-5" >
           <b-row class="d-flex align-items-center justify-content-start">
             <div class="col-auto">
-              <h4 class=" textTitle">{{ job.title }}</h4>
+              <h5 class=" textTitle">{{ job.title }}</h5>
             </div>
             <div  class="col d-flex align-items-center justify-content-start">
-              <span class="badge border rounded-pill bg-light text-dark p-1 mx-1" v-for="tag in job.tags" :key="tag"
+              <span class="badge border rounded-pill bg-white text-dark p-1 mx-1" v-for="tag in job.tags" :key="tag"
                 variant="secondary">
                 {{ tag }}
               </span>
@@ -21,14 +21,19 @@
           </b-row>
         
 
-          <b-row class="mt-2 me-5 d-flex align-items-center justify-content-between">
-            <b-col md="2" class="font-weight-bold textStart"><i class="fa-solid fa-city"></i> {{ job.company }}</b-col>
-            <b-col md="2" class="font-weight-bold textStart"><i class="fa-solid fa-location-dot"></i> {{ job.location }}</b-col>
-            <b-col md="2" class="font-weight-bold textStart"><i class="fa-regular fa-money-bill-1"></i> {{ job.salary }}</b-col>
-            <b-col md="2" class="font-weight-bold textStart"><i class="fa-solid fa-user-group"></i> {{ job.numVacancies }}</b-col>
-            <b-col md="2" class="font-weight-bold textStart"><i class="fa-regular fa-calendar"></i> {{ job.date }}</b-col>
-            <b-col md="2" class="font-weight-bold textStart" v-if="job.status">{{ job.status }}</b-col>
-          </b-row>
+          <div class="row mt-2 me-5 d-flex align-items-center justify-content-between">
+            <div class="col col-3  textStart"><i class="fa-solid fa-city"></i> {{ job.company }}</div>
+            <div class="col col-1  textStart"><i class="fa-solid fa-location-dot"></i> {{ job.location }}</div>
+            <div class=" col-1  textStart"><i class="fa-regular fa-money-bill-1"></i> {{ job.salary }}</div>
+            <div class=" col-1  textStart"><i class="fa-solid fa-user-group"></i> {{ job.numVacancies }} vacante</div>
+            <div class=" col-1  textStart"><i class="fa-regular fa-calendar"></i> {{ job.date }}</div>
+              <div class=" col-2">
+              <span class="badge border rounded-pill bg-white text-dark p-2 mx-1" v-for="benefit in job.benefits" :key="benefit"
+                variant="secondary" :title="benefit.benefit">
+                <i :class="benefit.icon"></i>
+              </span>
+              </div>
+          </div>
         </div>
 
       
@@ -57,7 +62,12 @@ export default {
   border-radius: 0.25rem;
   padding: 1rem;
   width: 100%;
+  transition: box-shadow 0.3s ease-in-out;
 }
+
+.job-item:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra negra */
+    }
 
 .imgLogo {
   width: 80px;

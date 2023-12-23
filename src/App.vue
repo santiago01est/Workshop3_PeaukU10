@@ -68,8 +68,18 @@ export default {
           salary: '$70k - $90k',
           numVacancies: 2,
           date: "2 days ago",
-          //Aqui irá el grupo de emojis de ventajas de trabajar con ellos [quitar status por lo mencionado]
-          status: 'Actively Hiring'
+          benefits: [{
+            benefit: 'Trabajo remoto parcial',
+            icon: 'fa-solid fa-location-dot'
+          },
+          {
+            benefit: 'Seguros',
+            icon: 'fa-solid fa-lock'
+          },
+          {
+            benefit: 'Fiesta de fin de año',
+            icon: 'fa-regular fa-face-grin-wink'
+          }]
         },
         {
           id: 2,
@@ -81,7 +91,7 @@ export default {
           salary: '$70k - $90k',
           numVacancies: 2,
           date: "2 days ago",
-          status: 'Actively Hiring'
+          
         },
         {
           id: 3,
@@ -93,7 +103,18 @@ export default {
           salary: '$70k - $90k',
           numVacancies: 2,
           date: "2 days ago",
-          status: 'Actively Hiring'
+          benefits: [{
+            benefit: 'Trabajo remoto parcial',
+            icon: 'fa-solid fa-location-dot'
+          },
+          {
+            benefit: 'Seguros',
+            icon: 'fa-solid fa-lock'
+          },
+          {
+            benefit: 'Fiesta de fin de año',
+            icon: 'fa-regular fa-face-grin-wink'
+          }]
         },
         {
           id: 4,
@@ -105,19 +126,29 @@ export default {
           salary: '$70k - $90k',
           numVacancies: 2,
           date: "2 days ago",
-          status: 'Actively Hiring'
         },
         {
           id: 5,
-          image: require('@/assets/empresa02.jpg'),
-          title: 'Frontend Developer',
-          tags: ['JavaScript', 'Vue', 'CSS'],
-          company: 'TechCorp',
-          location: 'Remote',
-          salary: '$70k - $90k',
-          numVacancies: 2,
+          image: require('@/assets/empresa05.png'),
+          title: 'DESARROLLADOR FRONTEND ANGULAR',
+          tags: ['JavaScript', 'TypeScript', 'Angular'],
+          company: 'Timbergrove Solutions',
+          location: 'Remoto en Colombia',
+          salary: '$2K - 5K USD',
+          numVacancies: 1,
           date: "2 days ago",
-          status: 'Actively Hiring'
+          benefits: [{
+            benefit: 'Trabajo remoto parcial',
+            icon: 'fa-solid fa-location-dot'
+          },
+          {
+            benefit: 'Seguros',
+            icon: 'fa-solid fa-lock'
+          },
+          {
+            benefit: 'Fiesta de fin de año',
+            icon: 'fa-regular fa-face-grin-wink'
+          }]
         },
         // ... más trabajos
       ]
