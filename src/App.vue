@@ -197,7 +197,7 @@ export default {
           title: 'DESARROLLADOR FRONTEND ANGULAR',
           tags: ['JavaScript', 'TypeScript', 'Angular'],
           company: 'Timbergrove Solutions',
-          location: 'Remoto en Colombia',
+          location: 'Remoto',
           salary: '$2K - 5K USD',
           numVacancies: 1,
           date: "2 days ago",
@@ -258,5 +258,6 @@ export default {
   text-align: center;
   color: #F8F9FA;
   color: black;
+  font-size: 1rem;
 }
 </style>
