@@ -17,25 +17,75 @@
 
 
     <!--Modales-->
-    <b-modal id="modalArea" title="Elige un areá de trabajo" style="background-color: #1d976c;">
+    <b-modal id="modalArea" title="Elige un areá de trabajo" centered>
       <lu class="navbar-nav">
         <li v-for="(option, index) in searchData.optionsArea" :key="index" class="nav-item d-flex m-0 p-0">
           <input type="checkbox" class="custom-control mx-2 custom-checkbox" />
           <label class="nav-item">{{ option.label }}</label>
         </li>
       </lu>
+      <template #modal-footer="{ ok, cancel }">
+          <b-button size="md" variant="outline-secondary" @click="cancel('cancel')">
+            Cerrar
+          </b-button>
+          <b-button size="md" variant="primary" @click="ok('ok')">
+            Aplicar
+          </b-button>
+      </template>
     </b-modal>
 
-    <b-modal id="modalCargo" title="BootstrapVue">
-      <p class="my-4">Cargo</p>
+    <b-modal id="modalCargo" centered title="Elige uno o más cargos">
+      <ul>
+        <li class="nav-item d-flex">
+          <select class="form-control btn btn-outline-secondary" style="color: #000;">
+            <option v-for="(optionCargo, index) in searchData.optionsCargo" :key="index" :value="optionCargo.value">
+              {{ optionCargo.label }}</option>
+          </select>
+
+        </li>
+      </ul>
+      <template #modal-footer="{ ok, cancel }">
+          <b-button size="md" variant="outline-secondary" @click="cancel('cancel')">
+            Cerrar
+          </b-button>
+          <b-button size="md" variant="primary" @click="ok('ok')">
+            Aplicar
+          </b-button>
+      </template>
     </b-modal>
 
-    <b-modal id="modalSalario" title="BootstrapVue">
-      <p class="my-4">Salario</p>
+    <b-modal id="modalSalario" centered title="Rango salarial">
+      <select class="form-control btn" style="color: #000;">
+        <option v-for="(optionMoneda, index) in searchData.optionsMoneda" :key="index" :value="optionMoneda.value">
+          {{ optionMoneda.label }}</option>
+      </select>
+      <div class="d-flex justify-content-around mt-3">
+        <input type="number" placeholder="MIN" class="form-control mx-2" />
+        <input type="number" placeholder="MAX" class="form-control mx-2" />
+      </div>
+      <template #modal-footer="{ ok, cancel }">
+          <b-button size="md" variant="outline-secondary" @click="cancel('cancel')">
+            Cerrar
+          </b-button>
+          <b-button size="md" variant="primary" @click="ok('ok')">
+            Aplicar
+          </b-button>
+      </template>
     </b-modal>
 
-    <b-modal id="modalUbicacion" title="BootstrapVue">
-      <p class="my-4">Ubicabion</p>
+    <b-modal id="modalUbicacion" centered title="Elige una ubicación">
+      <select class="form-control btn" style="color: #000;">
+        <option v-for="(optionUbicacion, index) in searchData.optionsUbicacion" :key="index"
+          :value="optionUbicacion.value">{{ optionUbicacion.label }}</option>
+      </select>
+      <template #modal-footer="{ ok, cancel }">
+          <b-button size="md" variant="outline-secondary" @click="cancel('cancel')">
+            Cerrar
+          </b-button>
+          <b-button size="md" variant="primary" @click="ok('ok')">
+            Aplicar
+          </b-button>
+      </template>
     </b-modal>
   </section>
 </template>

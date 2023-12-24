@@ -1,5 +1,5 @@
 <template>
-    <div class="containerListJob">
+    <div class="containerListJob" >
         <div v-for="job in jobs" :key="job.id">
             <JobItem :job="job"></JobItem>
         </div>
@@ -25,6 +25,10 @@ export default {
 <style scoped>
 .containerListJob {
     width: 100%;
+    height: 30rem;
+    display: block;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 </style>
 
