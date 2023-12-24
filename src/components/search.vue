@@ -1,5 +1,5 @@
 <template>
-  <section class="d-flex justify-content-center py-4 m-1 px-5">
+  <section class="d-flex justify-content-center m-0 py-4 px-5">
     <button class="btn btn-outline-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
     <input class="form-control  mx-5" placeholder="Busca por cargo, salario, ubicación o empresa" style="width: 40rem;" />
     <button class="btn btn-outline-light mt-1 mb-1" v-b-modal.modalArea>Area <i
@@ -108,6 +108,11 @@ export default {
 <style scoped>
 section {
   background-color: #3a8ced;
+  /* se mantiene al hacer scroll */
+  position: -webkit-sticky; /* Necesario para Safari */
+  position: sticky;
+  top: 0; /* La sección se mantendrá fija en la parte superior */
+  z-index: 100; /* Ajusta el índice z si es necesario */
 }
 
 button {

@@ -25,9 +25,8 @@ export default {
 <style scoped>
 .containerListJob {
     width: 100%;
-    height: 30rem;
-    display: block;
-    overflow-y: scroll;
+    height: 100vh;
+   
     scroll-behavior: smooth;
 }
 </style>
