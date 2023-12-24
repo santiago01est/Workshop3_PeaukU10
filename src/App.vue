@@ -197,7 +197,7 @@ export default {
           title: 'DESARROLLADOR FRONTEND ANGULAR',
           tags: ['JavaScript', 'TypeScript', 'Angular'],
           company: 'Timbergrove Solutions',
-          location: 'Remoto en Colombia',
+          location: 'Remoto',
           salary: '$2K - 5K USD',
           numVacancies: 1,
           date: "2 days ago",
@@ -243,26 +243,15 @@ export default {
         },
         {
           id: 7,
-          image: require('@/assets/empresa05.png'),
-          title: 'DESARROLLADOR FRONTEND ANGULAR',
-          tags: ['JavaScript', 'TypeScript', 'Angular'],
+          image: require('@/assets/empresa02.jpg'),
+          title: 'Maquetador Web',
+          tags: ['layout', 'css3', 'html'],
           company: 'Timbergrove Solutions',
-          location: 'Remoto en Colombia',
-          salary: '$2K - 7K USD',
+          location: 'Remote',
+          salary: '$ 1K - 2K USD',
           numVacancies: 1,
-          date: "1 days ago",
-          benefits: [{
-            benefit: 'Trabajo remoto parcial',
-            icon: 'fa-solid fa-location-dot'
-          },
-          {
-            benefit: 'Seguros',
-            icon: 'fa-solid fa-lock'
-          },
-          {
-            benefit: 'Fiesta de fin de año',
-            icon: 'fa-regular fa-face-grin-wink'
-          }]
+          date: "5 days ago",
+          
         },
         // ... más trabajos
       ]
@@ -280,5 +269,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
+  font-size: 1rem;
 }
 </style>
